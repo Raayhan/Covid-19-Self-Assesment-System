@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Start Test</title>
+    <link rel="icon" href="../img/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Material Design Bootstrap -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/753fbd11bf.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JQuery -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+
+    <script>
+      $.get("../layout/header.html", function (data) {
+        $("#header").replaceWith(data);
+      });
+    </script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div id="header"></div>
+    <div class="container">
+      <div class="container">
+        <div class="row justify-content-center py-4">
+          <h3>Covid-19 Self Assesment System</h3>
+        </div>
+
+        <div class="jumbotron">
+          <p class="lead" style="text-align: center;">
+            This Wizard will help you to detect whether you are affected by
+            Covid-19 or not.
+          </p>
+          <hr class="my-4" />
+          <div class="alert alert-info message" role="alert">
+            <i class="fas fa-exclamation-circle"></i>&nbsp;Please be informed
+            that, the information you give during the questionnaire session must
+            be correct in order to help the system to generate accurate results.
+          </div>
+
+          <!-- Default form contact -->
+          <form class="text-center border border-light p-5" action="#!">
+            <p class="h4 mb-4">STEP : 1</p>
+
+            <div class="form-row mb-4">
+              <div class="col-md-4 mb-4">
+                <!-- Age -->
+                <input
+                  type="number"
+                  class="form-control"
+                  placeholder="Age"
+                  required
+                />
+              </div>
+              <div class="col-md-4 mb-4">
+                <!-- Gender -->
+                <select class="browser-default custom-select mb-4" required>
+                  <option value="" selected disabled>Gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="col-md-4 mb-4">
+                <!-- Temp -->
+                <input
+                  type="number"
+                  class="form-control"
+                  placeholder="Body Temperature"
+                  required
+                />
+              </div>
+            </div>
+            <div
+              class="custom-control custom-checkbox mb-4"
+              style="float: left;"
+            >
+              <input
+                type="checkbox"
+                class="custom-control-input"
+                id="defaultUnchecked"
+                required
+              />
+              <label
+                class="custom-control-label red-text"
+                for="defaultUnchecked"
+                >I accept that, my given informations are correct
+              </label>
+            </div>
+            <!-- Send button -->
+            <button class="btn btn-dark-green btn-block" type="submit">
+              Submit
+            </button>
+          </form>
+          <!-- Default form contact -->
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $.get("../layout/footer.html", function (data) {
+        $("#footer").replaceWith(data);
+      });
+    </script>
+    <div id="footer"></div>
+  </body>
+</html>

@@ -4,7 +4,7 @@ body {
   font-family: "Baloo Tamma 2", cursive !important;
   background: rgba(195, 248, 255, 0.664) !important;
 }
-.jumbotron {
+.welcome {
   margin-top: 6%;
   margin-bottom: 6% !important;
   margin-right: 0.5%;
@@ -14,4 +14,8 @@ body {
     rgba(238, 174, 202, 1) 0%,
     rgba(148, 187, 233, 1) 100%
   );
+}
+.message {
+  font-size: 12px;
+  text-align: center;
 }
