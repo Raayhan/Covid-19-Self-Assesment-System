@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Covid-19 SAS | Step 2</title>
+    <link rel="icon" href="../img/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Material Design Bootstrap -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/753fbd11bf.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JQuery -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <!-- Script Js -->
+    <script type="javascript" src="../js/script.js"></script>
+    <script>
+      $.get("../layout/header.html", function (data) {
+        $("#header").replaceWith(data);
+      });
+    </script>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <div id="header"></div>
+    <div class="container">
+      <div class="container">
+        <div class="row justify-content-center py-4">
+          <h3><i class="fas fa-virus"></i> Covid-19 Self Assesment System</h3>
+        </div>
+
+        <div class="jumbotron">
+          <h4 style="text-align: center;">STEP : 2</h4>
+
+          <h6 style="text-align: center;">(Symptom Inoformations)</h6>
+          <br />
+          <hr class="my-4" />
+          <div class="alert alert-info message" role="alert">
+            <i class="fas fa-exclamation-circle"></i>&nbsp;Please be informed
+            that, the information you give during the questionnaire session must
+            be correct in order to help the system to generate accurate results.
+          </div>
+          <h5 style="text-align: center;">
+            Select the symptoms you are having from the list below :
+          </h5>
+          <!-- Default form -->
+          <form
+            class="text-center border border-light p-5"
+            action="../controller/test.php"
+            method="POST"
+          >
+            <div class="btn-group-toggle" data-toggle="buttons">
+              <div class="row justify-content-center mb-2">
+                <img class="symptoms" src="../img/breath.svg" alt="" />
+              </div>
+
+              <label class="btn btn-danger btn-block mb-4">
+                <input type="checkbox" autocomplete="off" />Breath Problem
+              </label>
+              <div class="row justify-content-center mb-2">
+                <img class="symptoms" src="../img/cough.png" alt="" />
+              </div>
+              <label class="btn btn-danger btn-block mb-4">
+                <input type="checkbox" autocomplete="off" />Dry Cough
+              </label>
+              <div class="row justify-content-center mb-2">
+                <img class="symptoms" src="../img/throat.svg" alt="" />
+              </div>
+              <label class="btn btn-danger btn-block mb-4">
+                <input type="checkbox" autocomplete="off" />Sore Throat
+              </label>
+              <div class="row justify-content-center mb-2">
+                <img class="symptoms" src="../img/weak.png" alt="" />
+              </div>
+              <label class="btn btn-danger btn-block mb-4">
+                <input type="checkbox" autocomplete="off" />Weakness
+              </label>
+              <div class="row justify-content-center mb-2">
+                <img class="symptoms" src="../img/nose.png" alt="" />
+              </div>
+              <label class="btn btn-danger btn-block mb-4">
+                <input type="checkbox" autocomplete="off" />Runny Nose
+              </label>
+            </div>
+            <br /><br />
+            <!-- Send button -->
+            <button
+              name="STEP_2"
+              class="btn btn-dark-green btn-block"
+              type="submit"
+            >
+              SUBMIT
+            </button>
+          </form>
+          <!-- Default form contact -->
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $.get("../layout/footer.html", function (data) {
+        $("#footer").replaceWith(data);
+      });
+    </script>
+    <div id="footer"></div>
+    <!-- Bootstrap core JavaScript -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"
+    ></script>
+  </body>
+</html>

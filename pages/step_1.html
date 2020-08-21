@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Start Test</title>
+    <title>Covid-19 SAS | Step 1</title>
     <link rel="icon" href="../img/icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="../css/style.css" />
     <!-- Bootstrap core CSS -->
@@ -41,7 +41,7 @@
     <div class="container">
       <div class="container">
         <div class="row justify-content-center py-4">
-          <h3>Covid-19 Self Assesment System</h3>
+          <h3><i class="fas fa-virus"></i> Covid-19 Self Assesment System</h3>
         </div>
 
         <div class="jumbotron">
@@ -57,8 +57,15 @@
           </div>
 
           <!-- Default form contact -->
-          <form class="text-center border border-light p-5" action="#!">
-            <p class="h4 mb-4">STEP : 1</p>
+          <form
+            class="text-center border border-light p-5"
+            action="../controller/test.php"
+            method="POST"
+          >
+            <h4>STEP : 1</h4>
+
+            <h6>(Generel Informations)</h6>
+            <br />
 
             <div class="form-row mb-4">
               <div class="col-md-4 mb-4">
@@ -68,11 +75,16 @@
                   class="form-control"
                   placeholder="Age"
                   required
+                  name="Age"
                 />
               </div>
               <div class="col-md-4 mb-4">
                 <!-- Gender -->
-                <select class="browser-default custom-select mb-4" required>
+                <select
+                  name="Gender"
+                  class="browser-default custom-select"
+                  required
+                >
                   <option value="" selected disabled>Gender</option>
                   <option value="Male">Male</option>
                   <option value="Female">Female</option>
@@ -83,8 +95,9 @@
                 <!-- Temp -->
                 <input
                   type="number"
+                  name="Temp"
                   class="form-control"
-                  placeholder="Body Temperature"
+                  placeholder="Body Temperature in °F"
                   required
                 />
               </div>
@@ -106,8 +119,12 @@
               </label>
             </div>
             <!-- Send button -->
-            <button class="btn btn-dark-green btn-block" type="submit">
-              Submit
+            <button
+              name="STEP_1"
+              class="btn btn-dark-green btn-block"
+              type="submit"
+            >
+              SUBMIT
             </button>
           </form>
           <!-- Default form contact -->
@@ -121,5 +138,10 @@
       });
     </script>
     <div id="footer"></div>
+    <!-- Bootstrap core JavaScript -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"
+    ></script>
   </body>
 </html>

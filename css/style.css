@@ -19,3 +19,10 @@ body {
   font-size: 12px;
   text-align: center;
 }
+.btn {
+  text-transform: none !important;
+}
+
+.symptoms {
+  max-width: 20%;
+}
