@@ -25,7 +25,7 @@ function step_1(){
 	date_default_timezone_set('Asia/Dhaka');
       $Date = date('d-m-Y');
      
-      header('location: ../pages/step_2.html');
+      header('location: ../test/step_2.html');
       
 }
 

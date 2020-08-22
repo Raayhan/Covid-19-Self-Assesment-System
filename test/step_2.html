@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Covid-19 SAS | Step 2</title>
+    <title>Covid-19 SAS | STEP 2</title>
     <link rel="icon" href="../img/icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="../css/style.css" />
     <!-- Bootstrap core CSS -->
@@ -42,21 +42,17 @@
     <div id="header"></div>
     <div class="container">
       <div class="container">
-        <div class="row justify-content-center py-4">
+        <div class="row title py-4">
           <h3><i class="fas fa-virus"></i> Covid-19 Self Assesment System</h3>
         </div>
 
         <div class="jumbotron">
           <h4 style="text-align: center;">STEP : 2</h4>
 
-          <h6 style="text-align: center;">(Symptom Inoformations)</h6>
+          <h6 style="text-align: center;">(Symptom Informations)</h6>
           <br />
           <hr class="my-4" />
-          <div class="alert alert-info message" role="alert">
-            <i class="fas fa-exclamation-circle"></i>&nbsp;Please be informed
-            that, the information you give during the questionnaire session must
-            be correct in order to help the system to generate accurate results.
-          </div>
+
           <h5 style="text-align: center;">
             Select the symptoms you are having from the list below :
           </h5>
@@ -71,31 +67,32 @@
                 <img class="symptoms" src="../img/breath.svg" alt="" />
               </div>
 
-              <label class="btn btn-danger btn-block mb-4">
+              <label class="btn btn-light-green smpt_btn mb-4">
                 <input type="checkbox" autocomplete="off" />Breath Problem
               </label>
+
               <div class="row justify-content-center mb-2">
                 <img class="symptoms" src="../img/cough.png" alt="" />
               </div>
-              <label class="btn btn-danger btn-block mb-4">
+              <label class="btn btn-light-green smpt_btn mb-4">
                 <input type="checkbox" autocomplete="off" />Dry Cough
               </label>
               <div class="row justify-content-center mb-2">
                 <img class="symptoms" src="../img/throat.svg" alt="" />
               </div>
-              <label class="btn btn-danger btn-block mb-4">
+              <label class="btn btn-light-green smpt_btn mb-4">
                 <input type="checkbox" autocomplete="off" />Sore Throat
               </label>
               <div class="row justify-content-center mb-2">
                 <img class="symptoms" src="../img/weak.png" alt="" />
               </div>
-              <label class="btn btn-danger btn-block mb-4">
+              <label class="btn btn-light-green smpt_btn mb-4">
                 <input type="checkbox" autocomplete="off" />Weakness
               </label>
               <div class="row justify-content-center mb-2">
                 <img class="symptoms" src="../img/nose.png" alt="" />
               </div>
-              <label class="btn btn-danger btn-block mb-4">
+              <label class="btn btn-light-green smpt_btn mb-4">
                 <input type="checkbox" autocomplete="off" />Runny Nose
               </label>
             </div>
@@ -103,11 +100,62 @@
             <!-- Send button -->
             <button
               name="STEP_2"
-              class="btn btn-dark-green btn-block"
-              type="submit"
+              class="btn btn-dark-green submit_btn"
+              data-toggle="modal"
+              data-target="#centralModalSm"
+              type="button"
             >
               SUBMIT
             </button>
+            <!-- Central Modal Small -->
+            <div
+              class="modal fade"
+              id="centralModalSm"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="myModalLabel"
+              aria-hidden="true"
+            >
+              <!-- Change class .modal-sm to change the size of the modal -->
+              <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title w-100 red-text" id="myModalLabel">
+                      Alert!
+                    </h5>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    Confirm your submission
+                  </div>
+                  <div class="modal-footer">
+                    <div class="row justify-content-center">
+                      <div class="col md-2">
+                        <button
+                          type="button"
+                          class="btn btn-elegant btn-sm"
+                          data-dismiss="modal"
+                        >
+                          CANCEL
+                        </button>
+                      </div>
+                      <div class="col md-2">
+                        <button type="submit" class="btn btn-dark-green btn-sm">
+                          CONFIRM
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </form>
           <!-- Default form contact -->
         </div>

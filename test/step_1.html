@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Covid-19 SAS | Step 1</title>
+    <title>Covid-19 SAS | STEP 1</title>
     <link rel="icon" href="../img/icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="../css/style.css" />
     <!-- Bootstrap core CSS -->
@@ -40,7 +40,7 @@
     <div id="header"></div>
     <div class="container">
       <div class="container">
-        <div class="row justify-content-center py-4">
+        <div class="row title py-4">
           <h3><i class="fas fa-virus"></i> Covid-19 Self Assesment System</h3>
         </div>
 
@@ -102,30 +102,67 @@
                 />
               </div>
             </div>
-            <div
-              class="custom-control custom-checkbox mb-4"
-              style="float: left;"
-            >
-              <input
-                type="checkbox"
-                class="custom-control-input"
-                id="defaultUnchecked"
-                required
-              />
-              <label
-                class="custom-control-label red-text"
-                for="defaultUnchecked"
-                >I accept that, my given informations are correct
-              </label>
-            </div>
+
             <!-- Send button -->
             <button
               name="STEP_1"
-              class="btn btn-dark-green btn-block"
-              type="submit"
+              class="btn btn-dark-green submit_btn"
+              data-toggle="modal"
+              data-target="#centralModalSm"
+              type="button"
             >
               SUBMIT
             </button>
+            <!-- Central Modal Small -->
+            <div
+              class="modal fade"
+              id="centralModalSm"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="myModalLabel"
+              aria-hidden="true"
+            >
+              <!-- Change class .modal-sm to change the size of the modal -->
+              <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title w-100 red-text" id="myModalLabel">
+                      Alert!
+                    </h5>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    Confirm your submission
+                  </div>
+                  <div class="modal-footer">
+                    <div class="row justify-content-center">
+                      <div class="col md-2">
+                        <button
+                          type="button"
+                          class="btn btn-elegant btn-sm"
+                          data-dismiss="modal"
+                        >
+                          CANCEL
+                        </button>
+                      </div>
+                      <div class="col md-2">
+                        <button type="submit" class="btn btn-dark-green btn-sm">
+                          CONFIRM
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Central Modal Small -->
           </form>
           <!-- Default form contact -->
         </div>

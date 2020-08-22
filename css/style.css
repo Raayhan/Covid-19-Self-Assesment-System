@@ -23,6 +23,31 @@ body {
   text-transform: none !important;
 }
 
+.submit_btn {
+  border-radius: 5px !important;
+  margin-left: 0% !important;
+  margin-right: 0% !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+.title {
+  text-align: center;
+}
 .symptoms {
   max-width: 20%;
+}
+.smpt_btn {
+  width: 50%;
+}
+@media only screen and (max-width: 767px) {
+  .smpt_btn {
+    width: 100%;
+    margin-left: 0% !important;
+    margin-right: 0% !important;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .smpt_btn {
+    font-size: 8px !important;
+  }
 }

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Covid-19 SAS | STEP 3</title>
+    <link rel="icon" href="../img/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Material Design Bootstrap -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/753fbd11bf.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JQuery -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <!-- Script Js -->
+    <script type="javascript" src="../js/script.js"></script>
+    <script>
+      $.get("../layout/header.html", function (data) {
+        $("#header").replaceWith(data);
+      });
+    </script>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <div id="header"></div>
+    <div class="container">
+      <div class="container">
+        <div class="row title py-4">
+          <h3><i class="fas fa-virus"></i> Covid-19 Self Assesment System</h3>
+        </div>
+
+        <div class="jumbotron">
+          <h4 style="text-align: center;">STEP : 3</h4>
+
+          <h6 style="text-align: center;">(Additional Informations)</h6>
+          <br />
+          <hr class="my-4" />
+
+          <h5 style="text-align: center;">
+            Select the symptoms you are having from the list below :
+          </h5>
+          <!-- Default form -->
+          <form
+            class="text-center border border-light p-5"
+            action="../controller/test.php"
+            method="POST"
+          >
+            <div class="btn-group-toggle" data-toggle="buttons">
+              <div class="row justify-content-center mb-2">
+                <img class="symptoms" src="../img/abdominal.jpg" alt="" />
+              </div>
+
+              <label class="btn btn-light-green smpt_btn mb-4">
+                <input type="checkbox" autocomplete="off" />Abdominal Pain
+              </label>
+
+              <div class="row justify-content-center mb-2">
+                <img class="symptoms" src="../img/vomit.png" alt="" />
+              </div>
+              <label class="btn btn-light-green smpt_btn mb-4">
+                <input type="checkbox" autocomplete="off" />Vomiting
+              </label>
+              <div class="row justify-content-center mb-2">
+                <img class="symptoms" src="../img/Diarrhoea.jpg" alt="" />
+              </div>
+              <label class="btn btn-light-green smpt_btn mb-4">
+                <input type="checkbox" autocomplete="off" />Diarrhoea
+              </label>
+              <div class="row justify-content-center mb-2">
+                <img class="symptoms" src="../img/chest.svg" alt="" />
+              </div>
+              <label class="btn btn-light-green smpt_btn mb-4">
+                <input type="checkbox" autocomplete="off" />Chest Pain
+              </label>
+              <div class="row justify-content-center mb-2">
+                <img class="symptoms" src="../img/muscle.png" alt="" />
+              </div>
+              <label class="btn btn-light-green smpt_btn mb-4">
+                <input type="checkbox" autocomplete="off" />Muscle Pain
+              </label>
+              <div class="row justify-content-center mb-2">
+                <img class="symptoms" src="../img/taste.png" alt="" />
+              </div>
+              <label class="btn btn-light-green smpt_btn mb-4">
+                <input type="checkbox" autocomplete="off" />Taste/Smell Loss
+              </label>
+              <div class="row justify-content-center mb-2">
+                <img class="symptoms" src="../img/skin.png" alt="" />
+              </div>
+              <label class="btn btn-light-green smpt_btn mb-4">
+                <input type="checkbox" autocomplete="off" />Skin Rash
+              </label>
+              <div class="row justify-content-center mb-2">
+                <img class="symptoms" src="../img/speech.png" alt="" />
+              </div>
+              <label class="btn btn-light-green smpt_btn mb-4">
+                <input type="checkbox" autocomplete="off" />Speech Loss
+              </label>
+            </div>
+
+            <br /><br />
+            <!-- Send button -->
+            <button
+              name="STEP_2"
+              class="btn btn-dark-green submit_btn"
+              data-toggle="modal"
+              data-target="#centralModalSm"
+              type="button"
+            >
+              SUBMIT
+            </button>
+            <!-- Central Modal Small -->
+            <div
+              class="modal fade"
+              id="centralModalSm"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="myModalLabel"
+              aria-hidden="true"
+            >
+              <!-- Change class .modal-sm to change the size of the modal -->
+              <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title w-100 red-text" id="myModalLabel">
+                      Alert!
+                    </h5>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    Confirm your submission
+                  </div>
+                  <div class="modal-footer">
+                    <div class="row justify-content-center">
+                      <div class="col md-2">
+                        <button
+                          type="button"
+                          class="btn btn-elegant btn-sm"
+                          data-dismiss="modal"
+                        >
+                          CANCEL
+                        </button>
+                      </div>
+                      <div class="col md-2">
+                        <button type="submit" class="btn btn-dark-green btn-sm">
+                          CONFIRM
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <!-- Default form contact -->
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $.get("../layout/footer.html", function (data) {
+        $("#footer").replaceWith(data);
+      });
+    </script>
+    <div id="footer"></div>
+    <!-- Bootstrap core JavaScript -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"
+    ></script>
+  </body>
+</html>
