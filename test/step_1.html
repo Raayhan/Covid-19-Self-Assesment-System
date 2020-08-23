@@ -62,6 +62,7 @@
             action="../controller/test.php"
             method="POST"
           >
+          
             <h4>STEP : 1</h4>
 
             <h6>(Generel Informations)</h6>
@@ -105,7 +106,6 @@
 
             <!-- Send button -->
             <button
-              name="STEP_1"
               class="btn btn-indigo submit_btn"
               data-toggle="modal"
               data-target="#centralModalSm"
@@ -153,7 +153,11 @@
                         </button>
                       </div>
                       <div class="col md-2">
-                        <button type="submit" class="btn btn-dark-green btn-sm">
+                        <button
+                          name="STEP_1"
+                          type="submit"
+                          class="btn btn-dark-green btn-sm"
+                        >
                           CONFIRM
                         </button>
                       </div>

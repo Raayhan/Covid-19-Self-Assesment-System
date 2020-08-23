@@ -42,7 +42,7 @@
     <!-- jumbotron -->
     <div class="jumbotron text-center hoverable p-4 welcome">
       <!-- Grid row -->
-      <div class="row">
+      <div class="row front_page">
         <!-- Grid column -->
         <div class="col-md-4 offset-md-1 mx-3 my-3">
           <!-- Featured image -->
@@ -63,9 +63,9 @@
 
           <h4 class="h5 pb-1"><i class="far fa-check-circle"></i> Welcome</h4>
 
-          <h2 class="h2 mb-4">
+          <h3 class="mb-4">
             <i class="fas fa-virus"></i> COVID-19 Self Assesment System
-          </h2>
+          </h3>
 
           <br />
           <div style="text-align: justify !important;">

@@ -1,11 +1,20 @@
+<?php
+if(!isset($_SESSION))
+    {
+        session_start();
+    }
+    $Score =  $_SESSION['Score'];
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Covid-19 SAS | STEP 3</title>
+    <title>Covid-19 SAS | STEP 2</title>
     <link rel="icon" href="../img/icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="../css/style.css" />
+
     <!-- Bootstrap core CSS -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
@@ -35,6 +44,11 @@
         $("#header").replaceWith(data);
       });
     </script>
+    <link
+      href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
   </head>
 
   <body>
@@ -47,9 +61,9 @@
         </div>
 
         <div class="jumbotron">
-          <h4 style="text-align: center;">STEP : 3</h4>
+          <h4 style="text-align: center;">STEP : 2</h4>
 
-          <h6 style="text-align: center;">(Additional Informations)</h6>
+          <h6 style="text-align: center;">(Symptom Informations)</h6>
           <br />
           <hr class="my-4" />
 
@@ -62,107 +76,68 @@
             action="../controller/test.php"
             method="POST"
           >
-            <div class="row justify-content-center mb-2">
-              <img class="symptoms" src="../img/abdominal.jpg" alt="" />
+          <input type="hidden" name="score" value="<?php echo $Score;?>" />
+            <div class="row justify-content-center mb-4">
+              <img class="symptoms" src="../img/breath.svg" alt="" />
             </div>
-
             <h5 style="text-align: center; color: red; font-weight: bold;">
-              Abdominal Pain
+              Breathing Problem
             </h5>
             <label class="switch mb-4"
-              ><input type="checkbox" id="togBtn" />
+              ><input type="checkbox" name="breath" />
               <div class="slider round">
                 <span class="on">YES</span><span class="off">NO</span>
               </div>
             </label>
             <hr />
 
-            <div class="row justify-content-center mb-2">
-              <img class="symptoms" src="../img/vomit.png" alt="" />
+            <div class="row justify-content-center mb-4">
+              <img class="symptoms" src="../img/cough.png" alt="" />
             </div>
             <h5 style="text-align: center; color: red; font-weight: bold;">
-              Vomitting
+              Dry Cough
             </h5>
             <label class="switch mb-4"
-              ><input type="checkbox" id="togBtn" />
+              ><input type="checkbox" name="cough" />
               <div class="slider round">
                 <span class="on">YES</span><span class="off">NO</span>
               </div>
             </label>
             <hr />
-            <div class="row justify-content-center mb-2">
-              <img class="symptoms" src="../img/Diarrhoea.jpg" alt="" />
+            <div class="row justify-content-center mb-4">
+              <img class="symptoms" src="../img/throat.svg" alt="" />
             </div>
             <h5 style="text-align: center; color: red; font-weight: bold;">
-              Diarrhoea
+              Sore Throat
             </h5>
             <label class="switch mb-4"
-              ><input type="checkbox" id="togBtn" />
+              ><input type="checkbox" name="throat" />
               <div class="slider round">
                 <span class="on">YES</span><span class="off">NO</span>
               </div>
             </label>
             <hr />
-            <div class="row justify-content-center mb-2">
-              <img class="symptoms" src="../img/chest.svg" alt="" />
+            <div class="row justify-content-center mb-4">
+              <img class="symptoms" src="../img/weak.png" alt="" />
             </div>
             <h5 style="text-align: center; color: red; font-weight: bold;">
-              Chest Pain
+              Weakness
             </h5>
             <label class="switch mb-4"
-              ><input type="checkbox" id="togBtn" />
+              ><input type="checkbox" name="weak" />
               <div class="slider round">
                 <span class="on">YES</span><span class="off">NO</span>
               </div>
             </label>
             <hr />
-            <div class="row justify-content-center mb-2">
-              <img class="symptoms" src="../img/muscle.png" alt="" />
+            <div class="row justify-content-center mb-4">
+              <img class="symptoms" src="../img/nose.png" alt="" />
             </div>
             <h5 style="text-align: center; color: red; font-weight: bold;">
-              Muscle Pain
+              Runny Nose
             </h5>
             <label class="switch mb-4"
-              ><input type="checkbox" id="togBtn" />
-              <div class="slider round">
-                <span class="on">YES</span><span class="off">NO</span>
-              </div>
-            </label>
-            <hr />
-            <div class="row justify-content-center mb-2">
-              <img class="symptoms" src="../img/taste.png" alt="" />
-            </div>
-            <h5 style="text-align: center; color: red; font-weight: bold;">
-              Taste/Smell Loss
-            </h5>
-            <label class="switch mb-4"
-              ><input type="checkbox" id="togBtn" />
-              <div class="slider round">
-                <span class="on">YES</span><span class="off">NO</span>
-              </div>
-            </label>
-            <hr />
-            <div class="row justify-content-center mb-2">
-              <img class="symptoms" src="../img/skin.png" alt="" />
-            </div>
-            <h5 style="text-align: center; color: red; font-weight: bold;">
-              Skin Rash
-            </h5>
-            <label class="switch mb-4"
-              ><input type="checkbox" id="togBtn" />
-              <div class="slider round">
-                <span class="on">YES</span><span class="off">NO</span>
-              </div>
-            </label>
-            <hr />
-            <div class="row justify-content-center mb-2">
-              <img class="symptoms" src="../img/speech.png" alt="" />
-            </div>
-            <h5 style="text-align: center; color: red; font-weight: bold;">
-              Speech Loss
-            </h5>
-            <label class="switch mb-4"
-              ><input type="checkbox" id="togBtn" />
+              ><input type="checkbox" name="nose" />
               <div class="slider round">
                 <span class="on">YES</span><span class="off">NO</span>
               </div>
@@ -172,13 +147,12 @@
             <br /><br />
             <!-- Send button -->
             <button
-              name="STEP_2"
               class="btn btn-indigo submit_btn"
               data-toggle="modal"
               data-target="#centralModalSm"
               type="button"
             >
-              SUBMIT
+              NEXT <i class="fas fa-angle-double-right"></i>
             </button>
             <!-- Central Modal Small -->
             <div
@@ -220,7 +194,11 @@
                         </button>
                       </div>
                       <div class="col md-2">
-                        <button type="submit" class="btn btn-dark-green btn-sm">
+                        <button
+                          name="STEP_2"
+                          type="submit"
+                          class="btn btn-dark-green btn-sm"
+                        >
                           CONFIRM
                         </button>
                       </div>
