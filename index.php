@@ -63,14 +63,14 @@
 
           <h4 class="h5 pb-1"><i class="far fa-check-circle"></i> Welcome</h4>
 
-          <h3 class="mb-4">
+          <h3 class="title mb-4">
             <i class="fas fa-virus"></i> COVID-19 Self Assesment System
           </h3>
 
           <br />
           <div style="text-align: justify !important;">
             <p class="font-weight-normal font-small brown-text">
-              The world is at its utmost crisis moments now. Due to COVID-19 we
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The world is at its utmost crisis moments now. Due to COVID-19 we
               lost many lives and many have been facing financial crisis all
               over the world. Economics are down due to pandemic.It is suggested
               that we all should be at home to be safe from the virus. Even
@@ -79,7 +79,7 @@
               whether you might be affected by Covid-19 or not.
             </p>
 
-            <a href="/test/step_1.html" class="btn btn-dark-green my-4"
+            <a href="/test/step_1.html" class="btn btn-dark-green submit_btn my-4"
               >GET STARTED</a
             >
           </div>

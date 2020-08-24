@@ -56,8 +56,8 @@ include('../controller/test.php');
     <div id="header"></div>
     <div class="container">
       <div class="container">
-        <div class="row title py-4">
-          <h3><i class="fas fa-virus"></i> Covid-19 Self Assesment System</h3>
+        <div class="row justify-content-center title py-4">
+          <h3 style="text-align:center;"><i class="fas fa-virus"></i> Covid-19 Self Assesment System</h3>
         </div>
 
         <div class="jumbotron">
@@ -72,20 +72,38 @@ include('../controller/test.php');
             <div class="card-header">
               Report
             </div>
-            <div class="card-body">
-              <h5 class="card-title"><?php echo $_SESSION['Result'];?></h5>
-              <p class="card-text">
+            <div class="card-body mb-4" style="margin-bottom:2%;">
+              <?php if($_SESSION['Result']=="Positive")
+              echo '<h5 class="card-title">Covid-19 : <span class="red-text font-weight-bold">'.$_SESSION['Result'].'</span></h5>';
+              else echo '<h5 class="card-title">Covid-19 : <span class="green-text font-weight-bold">'.$_SESSION['Result'].'</span></h5>';
+              ?>
+              <p class="card-text mb-4">
                 <?php echo $_SESSION['message'];?>
               </p>
-              <a href="../test/step_1.html" class="btn btn-primary">Test Again</a>
+              <div class="row justify-content-center">
+                 <a href="../test/step_1.html" class="btn btn-dark-green btn-block submit_btn smpt_btn">Test Again</a>
+              </div>
+             
             </div>
-            <div class="card-footer text-muted">
+            <div class="card-footer text-muted small">
               <?php echo $_SESSION['Date'];?>
             </div>
           </div>
         </div>
       </div>
     </div>
+    
+    <script>
+      $.get("../layout/footer.html", function (data) {
+        $("#footer").replaceWith(data);
+      });
+    </script>
+    <div id="footer"></div>
+    <!-- Bootstrap core JavaScript -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"
+    ></script>
   </body>
 </html>
 

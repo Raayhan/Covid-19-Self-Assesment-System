@@ -1,8 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Poppins:wght@500&display=swap");
 
 body {
-  font-family: "Baloo Tamma 2", cursive !important;
+  font-family: "Poppins", sans-serif !important;
   background: rgba(195, 248, 255, 0.664) !important;
+}
+.title {
+  font-family: "Alata", sans-serif !important;
+  font-weight: bold;
+  color: rgb(141, 0, 0);
 }
 .welcome {
   margin: 0.5%;
@@ -34,18 +39,16 @@ body {
   padding-top: 10px !important;
   padding-bottom: 10px !important;
 }
-.title {
-  text-align: center;
-}
+
 .symptoms {
   max-width: 20%;
 }
 .smpt_btn {
-  width: 50%;
+  max-width: 20% !important;
 }
 @media only screen and (max-width: 767px) {
   .smpt_btn {
-    width: 100%;
+    max-width: 100% !important;
     margin-left: 0% !important;
     margin-right: 0% !important;
   }

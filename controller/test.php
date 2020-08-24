@@ -40,11 +40,14 @@ $skin      = "";
 $speech    = "";
 $S3_Score  = "";
 
-
+// General
 $Score     = "";
 $Message   = "";
 
 
+// Conditions for step by step executions
+
+//Step 1 execution
 if (isset($_POST['STEP_1'])) {
      
       $Age      = $_POST["Age"];
@@ -54,44 +57,58 @@ if (isset($_POST['STEP_1'])) {
       $_SESSION['Age'] = $Age;
       $_SESSION['Gender'] = $Gender;
       $_SESSION['Temp'] = $Temp;
-     date_default_timezone_set('Asia/Dhaka');
+      date_default_timezone_set('Asia/Dhaka');
       $Date = date('d-m-Y');
       $_SESSION['Date'] = $Date;
-
-	
-    
-     step_1();
-    $_SESSION['Score'] = $Score;
-     header('location: ../test/step_2.php');
+	  
+      step_1();
+      $_SESSION['Score'] = $Score;
+      header('location: ../test/step_2.php');
 }
+
+
+
+
+//Step 2 execution
+
 if
  (isset($_POST['STEP_2'])) {
     step_2();
     $_SESSION['Score'] = $Score;
     header('location: ../test/step_3.php');
 }
+
+
+
+//Step 3 execution
 if (isset($_POST['STEP_3'])) {
     step_3();
     $_SESSION['Score'] = $Score;
     result();
     message();
+    insert();
    
-    header('location: ../pages/result.php');
+   
      
     
 }
+
+
+
+// funtion to generate result
+
 function result(){
 $Score = $_SESSION['Score'];
 
 if($Score<5){
    
-    $Result = 'NEGATIVE';
+    $Result = 'Negative';
     $_SESSION['Result'] = $Result;
     
 }
 if($Score >= 5){
    
-    $Result = 'POSITIVE';
+    $Result = 'Positive';
     $_SESSION['Result'] = $Result;
 }
 
@@ -99,6 +116,12 @@ return $_SESSION_['Result'];
 
 
 }
+
+
+
+
+
+// funtion to generate message
 
 function message(){
 $Score = $_SESSION['Score'];
@@ -131,11 +154,7 @@ return  $_SESSION['message'];
 
 
 
-
-
-
-
-
+//funtion for step 1
 
 function step_1(){
 	// call these variables with the global keyword to make them available in function
@@ -158,6 +177,8 @@ return $Score;
 }
 
 
+
+//funtion for step 2
 
 function step_2(){
 global $breath,$cough,$throat,$weak,$nose,$Score,$S2_Temp;
@@ -200,6 +221,9 @@ else { $Score =$Score+$S2_Temp;
 return $Score;
  
 }
+
+
+// funtion for step 3
 
 function step_3(){
 global $abdominal,$vomit,$diarrhoea,$chest,$muscel,$taste,$skin,$speech,$Score;
@@ -250,6 +274,57 @@ $Score = $Score+($abdominal+$vomit+$diarrhoea+$chest+$muscel+$taste+$skin+$speec
 return $Score;
  
 }
+
+
+// funtion to insert user data in database
+
+function insert(){
+
+    global $Age, $Gender, $Temp, $Date, $Score, $Result;
+
+$Age = $_SESSION['Age'];
+$Gender = $_SESSION['Gender'];
+$Temp = $_SESSION['Temp'];
+$Date = $_SESSION['Date'];
+$Score = $_SESSION['Score'];
+$Result = $_SESSION['Result'];
+
+
+$query = "INSERT INTO users (age, gender, temp, date, score, result)
+    VALUES ('$Age', '$Gender', '$Temp', '$Date', '$Score', '$Result')";
+
+    if (mysqli_query($conn, $query)) {
+      
+
+			header('location: ../pages/result.php');
+      }
+    else {
+	 echo "Error: " . $query . "<br>" . mysqli_error($conn);
+	 header('location: ../../index.php');
+      }
+
+
+
+
+
+
+}
+
+
+
+function display_error() {
+	global $errors;
+
+  	if (count($errors) > 0){
+	   	echo '<div class="error">';
+			foreach ($errors as $error){
+			echo $error .'<br>';
+			}
+		echo '</div>';
+	}
+}
+
+
 
 
 
