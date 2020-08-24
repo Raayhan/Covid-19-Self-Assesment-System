@@ -1,9 +1,17 @@
 <!--  
 <?php
-if(!isset($_SESSION))
-    {
-        session_start();
-    }
+
+require('../database/connect.php');
+include('../controller/test.php');
+include('../controllers/insert.php');
+
+if(!isset($_SESSION['user']))
+{
+    // not logged in
+    $_SESSION["error"]='You must run the test !';
+    header('Location:../test/step_1.php');
+    exit();
+}
 
 
 
@@ -81,7 +89,7 @@ if(!isset($_SESSION))
                 <?php echo $_SESSION['message'];?>
               </p>
               <div class="row justify-content-center">
-                 <a href="../test/step_1.html" class="btn btn-dark-green btn-block submit_btn smpt_btn">Test Again</a>
+                 <a href="../test/step_1.php" class="btn btn-dark-green btn-block submit_btn smpt_btn">Test Again</a>
               </div>
              
             </div>

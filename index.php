@@ -79,7 +79,7 @@
               whether you might be affected by Covid-19 or not.
             </p>
 
-            <a href="/test/step_1.html" class="btn btn-dark-green submit_btn my-4"
+            <a href="/test/step_1.php" class="btn btn-dark-green submit_btn my-4"
               >GET STARTED</a
             >
           </div>

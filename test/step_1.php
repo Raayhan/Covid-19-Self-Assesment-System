@@ -97,6 +97,7 @@
                 <!-- Temp -->
                 <input
                   type="number"
+                  step="0.01"
                   name="Temp"
                   class="form-control"
                   placeholder="Body Temperature in °F"
