@@ -4,12 +4,8 @@ if(!isset($_SESSION))
     {
         session_start();
     }
-include('../controller/test.php');
 
 
-
-
-//echo '<h4>'.$_SESSION['Age'].'<br>'.$_SESSION['Gender'].'<br>'.$_SESSION['Temp'].'<br>'.$_SESSION['Score'].'<br>'.$_SESSION['Result'].'<br>'.$_SESSION['message'].'</h4>';
 
 
 
@@ -72,10 +68,14 @@ include('../controller/test.php');
             <div class="card-header">
               Report
             </div>
-            <div class="card-body mb-4" style="margin-bottom:2%;">
+            <div class="card-body mb-4" style="margin-bottom:3%;">
+              <div class="row justify-content-center mb-4">
+                  <div class="col">Temperature : <?php echo $_SESSION['Temp']?>°F</div>
+                  <div class="col">Score : <?php echo $_SESSION['Score']?></div>
+              </div>
               <?php if($_SESSION['Result']=="Positive")
-              echo '<h5 class="card-title">Covid-19 : <span class="red-text font-weight-bold">'.$_SESSION['Result'].'</span></h5>';
-              else echo '<h5 class="card-title">Covid-19 : <span class="green-text font-weight-bold">'.$_SESSION['Result'].'</span></h5>';
+              echo '<h5 class="card-title mb-4">Covid-19 : <span class="red-text font-weight-bold">'.$_SESSION['Result'].'</span></h5>';
+              else echo '<h5 class="card-title mb-4">Covid-19 : <span class="green-text font-weight-bold">'.$_SESSION['Result'].'</span></h5>';
               ?>
               <p class="card-text mb-4">
                 <?php echo $_SESSION['message'];?>
