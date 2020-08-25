@@ -1,5 +1,5 @@
-# Covid-19-Self-Assesment-System
-Covid-19 Self Assesment System helps to detect whether you are affected by Covid-19 or not by using a questioner wizard. 
+# Covid-19-Self-Assessment-System
+Covid-19 Self Assessment System helps to detect whether you are affected by Covid-19 or not by using a questioner wizard. 
 
 
 The world is at its utmost crisis moments now. Due to COVID-19 we lost many lives and many have been facing financial crisis all over the world. Economics are down due to pandemic.
