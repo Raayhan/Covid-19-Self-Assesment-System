@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Covid-19 Self Assesment System</title>
+    <title>Covid-19 Self Assessment System</title>
     <link rel="icon" href="img/icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="css/style.css" />
     <!-- Bootstrap core CSS -->
@@ -64,7 +64,7 @@
           <h4 class="h5 pb-1"><i class="far fa-check-circle"></i> Welcome</h4>
 
           <h3 class="front_title mb-4">
-            <i class="fas fa-virus"></i> COVID-19 Self Assesment System
+            <i class="fas fa-virus"></i> COVID-19 Self Assessment System
           </h3>
 
           <br />

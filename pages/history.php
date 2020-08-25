@@ -47,7 +47,7 @@ include('../database/connect.php');
     <div id="header"></div>
     <div class="container fluid title">
         <div class="row justify-content-center title py-4">
-          <h5 style="text-align:center;"><i class="fas fa-virus"></i> Covid-19 Self Assesment System</h5>
+          <h5 style="text-align:center;"><i class="fas fa-virus"></i> Covid-19 Self Assessment System</h5>
         </div>
        </div>
     <div class="container">
