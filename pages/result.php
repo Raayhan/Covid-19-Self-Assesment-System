@@ -1,15 +1,13 @@
-<!--  
-<?php
 
-require('../database/connect.php');
+<?php
 include('../controller/test.php');
-include('../controllers/insert.php');
+
 
 if(!isset($_SESSION['user']))
 {
-    // not logged in
-    $_SESSION["error"]='You must run the test !';
-    header('Location:../test/step_1.php');
+    // not in Session
+   
+  header('Location:../test/step_1.php');
     exit();
 }
 
@@ -17,8 +15,10 @@ if(!isset($_SESSION['user']))
 
 
 
+
+
 ?>
--->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -72,12 +72,12 @@ if(!isset($_SESSION['user']))
             Test Complete&nbsp; <i class="far fa-check-circle"></i>
           </p>
           <hr class="my-4" />
-          <div class="card text-center">
+          <div class="card text-center mb-4">
             <div class="card-header">
               Report
             </div>
             <div class="card-body mb-4" style="margin-bottom:3%;">
-              <div class="row justify-content-center mb-4">
+              <div class="row justify-content-center mb-4" style="font-size:12px;">
                   <div class="col">Temperature : <?php echo $_SESSION['Temp']?>°F</div>
                   <div class="col">Score : <?php echo $_SESSION['Score']?></div>
               </div>
@@ -95,6 +95,66 @@ if(!isset($_SESSION['user']))
             </div>
             <div class="card-footer text-muted small">
               <?php echo $_SESSION['Date'];?>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-md-6 mb-4">
+              <div class="card gradient-card">
+
+                <div class="card-image">
+        
+                  <!-- Content -->
+                  <a href="#!">
+                    <div class="text-white d-flex h-100 mask blue-gradient-rgba">
+                      <div class="first-content align-self-center p-3">
+                        <h3 class="card-title">Call 999</h3>
+                        <p class="lead mb-0">National Emergency Services</p>
+                      </div>
+                      
+                    </div>
+                  </a>
+        
+                </div>
+        
+        
+                <!-- Content -->
+                <div class="card-body white" style="font-size:12px;">
+                <span class="font-weight-bold">Corona Info :</span><a href="http://corona.gov.bd/" target=_blank> http://corona.gov.bd/</a><br>
+                 <span class="font-weight-bold">IEDCR :</span><a href="https://iedcr.gov.bd/" target=_blank> https://iedcr.gov.bd/</a><br>
+                 <span class="font-weight-bold">DGHS :</span><a href="http://dashboard.dghs.gov.bd/" target=_blank> http://dashboard.dghs.gov.bd/</a>
+                </div>
+        
+            </div>
+            </div>
+            <div class="col-md-6 mb-4">
+              <div class="card gradient-card">
+
+                <div class="card-image">
+        
+                  <!-- Content -->
+                  <a href="#!">
+                    <div class="text-white d-flex h-100 mask purple-gradient-rgba">
+                      <div class="first-content align-self-center p-3">
+                        <h3 class="card-title">Call 333</h3>
+                        <p class="lead mb-0">National Health Helpline</p>
+                      </div>
+                     
+                    </div>
+                  </a>
+        
+                </div>
+        
+               
+        
+                <!-- Content -->
+                <div class="card-body white" style="font-size:12px;">
+                 <span class="font-weight-bold">Health Info :</span><span class="red-text font-weight-bold"> 16263</span><br>
+                 <span class="font-weight-bold">IEDCR :</span><span class="red-text font-weight-bold"> 10655</span><br>
+                 <span class="font-weight-bold">Health Line :<span class="red-text font-weight-bold"> 09611677777</span>
+
+                </div>
+        
+            </div>
             </div>
           </div>
         </div>

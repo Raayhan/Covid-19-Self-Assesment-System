@@ -10,7 +10,7 @@ body {
   color: rgb(141, 0, 0);
 }
 .welcome {
-  margin: 0.5%;
+  margin: 1%;
   background: linear-gradient(
     90deg,
     rgba(238, 174, 202, 1) 0%,
@@ -18,7 +18,7 @@ body {
   );
 }
 .jumbotron {
-  margin-bottom: 0.5% !important;
+  margin-bottom: 1% !important;
 }
 .front_page {
   padding-top: 6.5% !important;

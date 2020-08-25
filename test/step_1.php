@@ -47,7 +47,7 @@
         </div>
 
         <div class="jumbotron">
-          <p class="lead" style="text-align: center;">
+                 <p class="lead" style="text-align: center;">
             This Wizard will help you to detect whether you are affected by
             Covid-19 or not.
           </p>
@@ -169,16 +169,44 @@
               </div>
             </div>
             <!-- Central Modal Small -->
-            <!-- Progress Bar -->
-            <div class="progress" style="margin-top: 2%;">
-              <div
-                class="progress-bar progress-bar-striped progress-bar-animated"
-                role="progressbar"
-                aria-valuenow="15"
-                aria-valuemin="0"
-                aria-valuemax="100"
-                style="width: 15%;"
-              ></div>
+            
+           <!-- Horizontal Steppers -->
+                  <div class="row">
+                    <div class="col">
+
+                      <!-- Stepers Wrapper -->
+                      <ul class="stepper stepper-horizontal">
+
+                        <!-- First Step -->
+                        <li class="active">
+                          <a href="#!">
+                            <span class="circle">1</span>
+                            <span class="label">STEP 1</span>
+                          </a>
+                        </li>
+
+                        <!-- Second Step -->
+                        <li class="inactive">
+                          <a href="#!">
+                          <i class="fas fa-arrow-circle-right fa-lg text-danger font-weight-bold"></i>
+                            <span class="label">STEP 2</span>
+                          </a>
+                        </li>
+
+                        <!-- Third Step -->
+                        <li class="inactive">
+                          <a href="#!">
+                          <i class="fas fa-arrow-circle-right fa-lg text-danger font-weight-bold"></i>
+                            <span class="label">STEP 3</span>
+                          </a>
+                        </li>
+
+                      </ul>
+                      <!-- /.Stepers Wrapper -->
+
+                    </div>
+                  </div>
+                  <!-- /.Horizontal Steppers -->
             </div>
           </form>
           <!-- Default form contact -->
