@@ -89,7 +89,7 @@ include('../database/connect.php');
       echo '<th scope="row">'.$row['id'].'</th>';
       echo '<td>'.$row['age'].'</td>';
       echo  '<td>'.$row['gender'].'</td>';
-      echo  '<td>'.$row['temp'].'</td>';
+      echo  '<td>'.$row['temp'].'°F</td>';
       echo  '<td>'.$row['date'].'</td>';
       echo  '<td>'.$row['score'].'</td>';
       echo  '<td>'.$row['result'].'</td>';
