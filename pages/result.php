@@ -8,7 +8,7 @@ if(!isset($_SESSION['user']))
     // not in Session
    
   header('Location:../test/step_1.php');
-    exit();
+   exit();
 }
 
 
@@ -58,12 +58,13 @@ if(!isset($_SESSION['user']))
   </head>
   <body>
     <div id="header"></div>
-    <div class="container">
-      <div class="container">
+    
+      <div class="container fluid title">
         <div class="row justify-content-center title py-4">
-          <h3 style="text-align:center;"><i class="fas fa-virus"></i> Covid-19 Self Assesment System</h3>
+          <h5 style="text-align:center;"><i class="fas fa-virus"></i> Covid-19 Self Assesment System</h5>
         </div>
-
+       </div>
+       <div class="container">
         <div class="jumbotron">
           <p
             class="h4"
@@ -93,7 +94,7 @@ if(!isset($_SESSION['user']))
               </div>
              
             </div>
-            <div class="card-footer text-muted small">
+            <div class="card-footer text-muted small">Tested on: 
               <?php echo $_SESSION['Date'];?>
             </div>
           </div>
@@ -107,9 +108,10 @@ if(!isset($_SESSION['user']))
                   <a href="#!">
                     <div class="text-white d-flex h-100 mask blue-gradient-rgba">
                       <div class="first-content align-self-center p-3">
-                        <h3 class="card-title">Call 999</h3>
+                        <h5 class="card-title"><i class="fas fa-headset"></i> Call 999</h5>
                         <p class="lead mb-0">National Emergency Services</p>
                       </div>
+                     
                       
                     </div>
                   </a>
@@ -118,10 +120,14 @@ if(!isset($_SESSION['user']))
         
         
                 <!-- Content -->
-                <div class="card-body white" style="font-size:12px;">
-                <span class="font-weight-bold">Corona Info :</span><a href="http://corona.gov.bd/" target=_blank> http://corona.gov.bd/</a><br>
-                 <span class="font-weight-bold">IEDCR :</span><a href="https://iedcr.gov.bd/" target=_blank> https://iedcr.gov.bd/</a><br>
-                 <span class="font-weight-bold">DGHS :</span><a href="http://dashboard.dghs.gov.bd/" target=_blank> http://dashboard.dghs.gov.bd/</a>
+                <div class="card-body white help" style="font-size:12px;">
+                <hr>
+                <span class="font-weight-bold">Corona Info :</span><a href="http://corona.gov.bd/" target=_blank> &nbsp;corona.gov.bd</a><br>
+                 <hr>
+                 <span class="font-weight-bold">IEDCR :</span><a href="https://iedcr.gov.bd/" target=_blank> &nbsp;iedcr.gov.bd</a><br>
+                 <hr>
+                 <span class="font-weight-bold">DGHS :</span><a href="http://dashboard.dghs.gov.bd/" target=_blank>&nbsp; dghs.gov.bd</a>
+                 <hr>
                 </div>
         
             </div>
@@ -135,7 +141,7 @@ if(!isset($_SESSION['user']))
                   <a href="#!">
                     <div class="text-white d-flex h-100 mask purple-gradient-rgba">
                       <div class="first-content align-self-center p-3">
-                        <h3 class="card-title">Call 333</h3>
+                        <h5 class="card-title"><i class="fas fa-user-md"></i> Call 333</h5>
                         <p class="lead mb-0">National Health Helpline</p>
                       </div>
                      
@@ -147,11 +153,14 @@ if(!isset($_SESSION['user']))
                
         
                 <!-- Content -->
-                <div class="card-body white" style="font-size:12px;">
+                <div class="card-body white help" style="font-size:12px;">
+                <hr>
                  <span class="font-weight-bold">Health Info :</span><span class="red-text font-weight-bold"> 16263</span><br>
+                 <hr>
                  <span class="font-weight-bold">IEDCR :</span><span class="red-text font-weight-bold"> 10655</span><br>
+                 <hr>
                  <span class="font-weight-bold">Health Line :<span class="red-text font-weight-bold"> 09611677777</span>
-
+                 <hr>
                 </div>
         
             </div>

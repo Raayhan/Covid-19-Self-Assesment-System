@@ -4,7 +4,7 @@
     class="navbar navbar-expand-lg navbar-dark purple-gradient animated slideInDown"
   >
     <!-- Navbar brand -->
-    <a class="navbar-brand" href="/">Covid-19 SAS</a>
+    <a class="navbar-brand" href="/"><img class="logo" src="../img/logo.png" alt="Covid-19 SAS"></a>
 
     <!-- Collapse button -->
     <button
@@ -30,10 +30,10 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" data-toggle="modal" data-target="#centralModalSm">Features</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Result History</a>
+          <a class="nav-link" href="../pages/history.php">Result History</a>
         </li>
       </ul>
       <!-- Links -->
@@ -42,3 +42,60 @@
   </nav>
 </div>
 <!--Navbar Ends-->
+
+
+<!-- Central Modal Small -->
+<div class="modal fade" id="centralModalSm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+
+  <!-- Change class .modal-sm to change the size of the modal -->
+  <div class="modal-dialog modal-lg" role="document">
+
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title w-100" id="myModalLabel">About Covid-19 SAS</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="jumbotron text-center  p-4 mb-0" >
+          <div class="row justify-content-center welcome" style="padding-top:5%;padding-bottom:5%;">
+               
+               <div class="col-md-4 offset-md-1 mx-3 my-3 animated fadeInUp">
+                    <div class="view overlay">
+                         <img src="../img/logo.png" class="img-fluid" alt="Panel Image">    
+                    </div>
+               </div>
+    
+               
+               <div class="col-md-7 text-md-left ml-3 mt-3 animated fadeInUp teacher_dashboard" style="margin-left: 0px!important;">
+                  
+    
+                   <h4 class="h4 font-weight-bold mb-4">Covid-19 Self Assesment System</h5>
+    
+                   <p class="text-justify mb-4">The world is at its utmost crisis moments now. Due to COVID-19 we lost many lives and many have been facing financial crisis all over the world. Economics are down due to pandemic.It is suggested that we all should be at home to be safe from the virus. Even though we try to save ourselves but there might be chances to get affected by the virus anyway. This website will help you to detect whether you might be affected by Covid-19 or not.</p>
+        
+                   
+                   <h5 class="text-danger">Developed & Maintained by:</h5>
+                   <h6 class="font-weight-bold mb-2">Rayhan Ahmed Rakib</h6>
+                   <p><i class="fas fa-envelope"></i> Rayhan.rakib@northsouth.edu</p>
+                   <p><i class="fas fa-phone-alt"></i> +88 0171-7272999</p>
+                   <a class="black-text" href="https://raayhan.github.io" target="_blank"><i class="fas fa-globe"></i> &nbsp;Visit Website</a>
+                   <p class="mt-4">© 2020 Covid-19 SAS, All rights reserved</p>
+               </div>
+      
+    
+          </div>
+    
+    
+    </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger submit_btn btn-sm" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>

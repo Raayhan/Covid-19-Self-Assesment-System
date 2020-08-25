@@ -3,7 +3,7 @@ if(!isset($_SESSION))
 {
     session_start();
 }
-include('../controller/test.php');
+include('test.php');
 include('../database/connect.php');
 
 

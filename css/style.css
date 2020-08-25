@@ -1,13 +1,31 @@
-@import url("https://fonts.googleapis.com/css2?family=Alata&family=Poppins:wght@500&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
 body {
-  font-family: "Poppins", sans-serif !important;
+  font-family: 'Quicksand', sans-serif!important;
   background: rgba(195, 248, 255, 0.664) !important;
 }
 .title {
-  font-family: "Alata", sans-serif !important;
+  font-family: 'Comfortaa', cursive!important;
   font-weight: bold;
-  color: rgb(141, 0, 0);
+  color: rgb(0, 0, 0);
+  background:#ffdca9;
+  border-radius: 5px;
+  
+  
+
+}
+
+.logo{
+  height: 50px!important;
+}
+.navbar-brand{
+  padding:0px!important;
+  margin-right:2rem!important;
+}
+.front_title{
+  font-family: 'Comfortaa', cursive!important;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
 }
 .welcome {
   margin: 1%;
@@ -38,6 +56,10 @@ body {
   margin-right: 0% !important;
   padding-top: 10px !important;
   padding-bottom: 10px !important;
+}
+
+.help hr{
+  margin:3px!important;
 }
 
 .symptoms {

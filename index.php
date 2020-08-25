@@ -63,7 +63,7 @@
 
           <h4 class="h5 pb-1"><i class="far fa-check-circle"></i> Welcome</h4>
 
-          <h3 class="title mb-4">
+          <h3 class="front_title mb-4">
             <i class="fas fa-virus"></i> COVID-19 Self Assesment System
           </h3>
 

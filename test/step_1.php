@@ -38,13 +38,12 @@
   <body>
     <!-- Navbar -->
     <div id="header"></div>
-    <div class="container">
-      <div class="container">
+    <div class="container fluid title">
         <div class="row justify-content-center title py-4">
-          <h3 style="text-align: center;">
-            <i class="fas fa-virus"></i> Covid-19 Self Assesment System
-          </h3>
+          <h5 style="text-align:center;"><i class="fas fa-virus"></i> Covid-19 Self Assesment System</h5>
         </div>
+       </div>
+       <div class="container">
 
         <div class="jumbotron">
                  <p class="lead" style="text-align: center;">

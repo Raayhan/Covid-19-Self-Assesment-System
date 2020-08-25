@@ -49,11 +49,12 @@ if(!isset($_SESSION))
   <body>
     <!-- Navbar -->
     <div id="header"></div>
-    <div class="container">
-      <div class="container">
+    <div class="container fluid title">
         <div class="row justify-content-center title py-4">
-          <h3><i class="fas fa-virus"></i> Covid-19 Self Assesment System</h3>
+          <h5 style="text-align:center;"><i class="fas fa-virus"></i> Covid-19 Self Assesment System</h5>
         </div>
+       </div>
+       <div class="container">
 
         <div class="jumbotron">
           <h4 style="text-align: center;">STEP : 3</h4>

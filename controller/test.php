@@ -89,7 +89,7 @@ if (isset($_POST['STEP_3'])) {
     $_SESSION['Score'] = $Score;
     result();
     message();
-    header('location: ../database/insert.php');
+    header('location: insert.php');
    
    
      
