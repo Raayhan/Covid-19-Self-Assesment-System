@@ -5,7 +5,7 @@ Covid-19 Self Assesment System helps to detect whether you are affected by Covid
 The world is at its utmost crisis moments now. Due to COVID-19 we lost many lives and many have been facing financial crisis all over the world. Economics are down due to pandemic.
  Covid-19 SAS is a “Web Application” that do a self-assessment regarding COVID-19 symptoms and give a score based on the given answers. And based on resulted score the system can suggest user what to do, either he/she can take treatment at home or need to call a doctor or go to hospital.
 
- 
+ ![Table](https://i.ibb.co/vBGJ6Jr/Annotation-2020-08-25-235524.png)
 
 
 Baseline Features:
